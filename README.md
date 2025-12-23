@@ -8,3 +8,5 @@ Sistema de Auditoría Dual para el control de calidad de Prompts.
 
 ## 🛠️ Validación
 Proyecto validado mediante **Promptfoo** asegurando salidas deterministas y sin ruido conversacional.
+## 🚀 Evidencia de Validación
+![Resultado del Test en Verde](./resultado_auditoria.png)
