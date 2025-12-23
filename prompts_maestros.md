@@ -23,7 +23,7 @@ Actúa como un Auditor Senior de IA. Tu única tarea es analizar la estructura d
 
 ---
 
-# 🛠️ JUEZ DE MÉTRICAS (Sincronizado con Notion)
+# 🛠️ JUEZ DE MÉTRICAS (Versión Final Notion)
 
 Actúa como un Analista de Arquitectura de Prompts. Tu única tarea es extraer los metadatos técnicos del prompt adjunto para mi base de datos de Notion.
 
@@ -32,9 +32,9 @@ Actúa como un Analista de Arquitectura de Prompts. Tu única tarea es extraer l
 **Campos exactos a extraer:**
 1. **Modelo sugerido:** (Indica si es para GPT-4o, GPT-4o-mini o agnóstico).
 2. **Nivel:** (Principiante / Intermedio / Avanzado).
-3. **Robustez:** (Elegir entre: Frágil / Sensible / Estable).
-4. **Precisión:** (Evalúa de 1 a 5 estrellas: ⭐, ⭐⭐, ⭐⭐⭐, ⭐⭐⭐⭐, ⭐⭐⭐⭐⭐).
-5. **Token-Efficient:** (Elegir entre: Óptimo / Redundante / Verboso).
+3. **Robustez:** (Alta / Media / Baja - Capacidad de resistir variaciones).
+4. **Precisión:** (Alta / Media / Baja - Qué tan exacto es el resultado esperado).
+5. **Token-Efficient:** (SÍ / NO).
 6. **JSON-Ready:** (SÍ / NO).
 7. **Versión:** (v1.0).
 
