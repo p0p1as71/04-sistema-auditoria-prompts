@@ -1,0 +1,28 @@
+prompts:
+  - |
+    ID: JUEZ_SCORING
+    Actúa como un Auditor Senior de IA. Analiza el prompt adjunto y asígnale puntos según mi baremo:
+    Contexto(2), Instrucción(2), Formato(1), Restricciones(1), Ejemplos(1), Rol(1), Verificable(1).
+    Prompt a evaluar: {{prompt_a_testear}}
+    Resultado: Tabla Markdown con columna "Puntos".
+
+  - |
+    ID: JUEZ_METRICAS
+    Actúa como Analista de Arquitectura. Extrae los metadatos del prompt adjunto:
+    Modelo, Nivel, Complejidad, Token-Efficient, JSON-Ready, Versión.
+    Prompt a evaluar: {{prompt_a_testear}}
+    Resultado: Tabla Markdown con estas columnas exactas.
+
+providers:
+  - openai:gpt-4o-mini
+
+tests:
+  - vars:
+      prompt_a_testear: "Actúa como experto mecánico. Explica el motor del Audi A6 en formato lista. No uses tecnicismos."
+    assert:
+      - type: icontains
+        value: "Puntos"
+      - type: icontains
+        value: "Modelo"
+      - type: icontains
+        value: "Nivel"

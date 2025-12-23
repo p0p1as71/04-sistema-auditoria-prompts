@@ -1,0 +1,1 @@
+Framework de auditoría técnica para evaluar la calidad de prompts mediante scoring de 7 puntos y métricas de eficiencia. Validado con Promptfoo.
