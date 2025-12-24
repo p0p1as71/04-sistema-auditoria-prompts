@@ -1,13 +1,8 @@
-# 04-sistema-auditoria-prompts
+# Smart Stock Management AI (600+ Vehicles)
+**Caso de Negocio:** Optimización integral de una concesionaria mediante IA Generativa.
 
-Sistema de Auditoría Dual para el control de calidad de Prompts. 
+Este proyecto despliega una arquitectura modular para gestionar un stock crítico de vehículos:
 
-## 🚀 Funcionalidades
-1. **Scoring de 7 pilares**: Evaluación cuantitativa de la estructura del prompt.
-2. **Extracción de Métricas**: Identificación de metadatos técnicos para bases de datos en Notion.
-
-## 🛠️ Validación
-Proyecto validado mediante **Promptfoo** asegurando salidas deterministas y sin ruido conversacional.
-## 🚀 Evidencia de Validación
-![Resultado del Test en Verde](./resultado_auditoria.png)
-[Ver documentación detallada en Notion] https://heavenly-brownie-8e2.notion.site/Proyecto-2-Sistema-de-Auditor-a-de-Calidad-y-M-tricas-2d2c6facf0908037b2b3f9c4e633b15a
+- **Módulo 0: Auditoría Técnica (QA)** - El motor de validación que asegura que todos los prompts cumplen con el scoring técnico antes de ejecutarse. (Ubicado en `/modulo-0-auditoria`).
+- **Módulo 1: Clasificación de Inventario** - Automatización de etiquetas ECO según especificaciones técnicas.
+- **Módulo 2: Escala de Ventas** - Generación multicanal de anuncios optimizada para conversión.
