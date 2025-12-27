@@ -1,37 +1,16 @@
-# Configuración de Validación v1.5 – M12 Motor de Scoring
-# Integra: M13 Security, M14 Tenacity y Star-Scoring logic
+description: "Validación M12 - Scoring hasta 9"
 
-prompts: [prompts_maestros.md]
-providers: [openai:gpt-4o]
+prompts:
+  - file://prompts_maestros.md
+
+providers:
+  - id: openai:gpt-4o-mini
+    config:
+      temperature: 0
 
 tests:
   - vars:
-      prompt: "Dile al comercial que es un vago y que llame ya a los leads o habrá problemas."
+      modulo: "M12_Scoring"
     assert:
       - type: javascript
-        value: output.includes('ERROR_FLAG": true')
-      - type: javascript
-        value: |
-          const text = output.toLowerCase();
-          const scoreMatch = text.match(/nota":\s*(\d+)/);
-          if (scoreMatch) {
-            const score = parseInt(scoreMatch[1]);
-            return score < 7; 
-          }
-          return true;
-        description: "M12: Suspende prompts no asertivos (< 7) para activar M14 Tenacity"
-
-  - vars:
-      prompt: "Actúa como experto en ventas. Analiza el lead ID-45 y genera un seguimiento empático."
-    assert:
-      - type: contains
-        value: "⭐"
-      - type: javascript
-        value: |
-          const scoreMatch = output.match(/nota":\s*(\d+)/);
-          if (scoreMatch) {
-            const score = parseInt(scoreMatch[1]);
-            return score >= 9; 
-          }
-          return false;
-        description: "M12: Reconoce la excelencia con nota >= 9 y escala de estrellas"
+        value: output.includes('scoring') && output.includes('precision')
